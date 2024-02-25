@@ -10,7 +10,7 @@ var http = require('http');
 
 // our setup
 const mongoose = require("mongoose");
-require("dotenv/config");
+
 
 /**
  * Get port from environment and store in Express.
@@ -95,5 +95,9 @@ function onListening() {
 
 
 //mongo db connection
-
-
+mongoose
+  .connect(process.env.DB_URI)
+  .then(() => {
+    console.log("Database Connected");
+  })
+  .catch((err) => console.log(err));
