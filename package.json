@@ -13,6 +13,7 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "mongodb": "^4.1.0",
-    "mongoose": "^8.1.1"
+    "mongoose": "^8.1.1",
+     "dotenv": "^16.4.1"
   }
 }
