@@ -7,10 +7,11 @@
 var app = require('../app');
 var debug = require('debug')('vercel-express-online-demo:server');
 var http = require('http');
+require("dotenv/config");
 
 // our setup
 const mongoose = require("mongoose");
-require("dotenv/config");
+
 
 /**
  * Get port from environment and store in Express.
@@ -101,4 +102,3 @@ mongoose
     console.log("Database Connected");
   })
   .catch((err) => console.log(err));
-
