@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('vercel-express-online-demo:server');
 var http = require('http');
+require("dotenv/config");
 
 // our setup
 const mongoose = require("mongoose");
