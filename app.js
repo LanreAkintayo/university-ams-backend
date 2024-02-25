@@ -19,6 +19,24 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+//our 
+const cors = require("cors");
+const corsOptions = {
+  origin: "*",
+  credientials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// ours
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
