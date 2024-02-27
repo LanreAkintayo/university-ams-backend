@@ -21,11 +21,11 @@ const profileDetailsSchema = new Schema({
 const metricsDetailsSchema = new Schema({
   minimumAmount: { type: String },
   maximumAmount: { type: String },
-  insuranceFeePercentage: { type: Number },
-  liquidityPercentage: { type: Number },
-  penaltyPercentage: { type: Number },
-  durations: [{ type: Number }],
-  percentages: [{ type: Number }],
+  insuranceFeePercentage: { type: String },
+  liquidityPercentage: { type: String },
+  penaltyPercentage: { type: String },
+  durations: [{ type: String }],
+  percentages: [{ type: String }],
 });
 
 const projectsSchema = new Schema({
